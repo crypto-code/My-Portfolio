@@ -114,10 +114,7 @@ function openSection(sectionId) {
 }
 
 $(document).ready(function(){
-    $("#code").load("./components/code.html");
-    $("#cohortconnect").load("./components/code_cards/cohortconnect.html");
-    $("#foodzyme").load("./components/code_cards/foodzyme.html");
-    $("#design").load("./components/design.html");
+    $("#research").load("./components/research.html");
     var i, tabcontent;
     tabcontent = document.querySelectorAll(".tabcontent-hidden");
     for (i = 0; i < tabcontent.length; i++) {

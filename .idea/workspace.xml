@@ -5,25 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61521866-1f2c-47d4-8e3e-035242af5ea9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/img/design_skills/figma.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/design_skills/smiley.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/back.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/icons/research.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/research/M2UGen.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/research/MU-LLaMA.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/components/research.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/author.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/main_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/member-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/parallax/testimonial.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/qualities/fed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/qualities/pd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/qualities/swe.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/qualities/uiux.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slide_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slider/affinity.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slider/banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/slider/cinelli.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,34 +38,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/atinsaki/Desktop/Aishu/Aishu Portfolio/img/portfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/atinsaki/Desktop/NUS/My-Portfolio/img/research",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img/research" />
       <recent name="$PROJECT_DIR$/img/portfolio" />
       <recent name="$PROJECT_DIR$/img/awards" />
       <recent name="$PROJECT_DIR$/js" />
       <recent name="$PROJECT_DIR$/css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/img/design_skills" />
+      <recent name="$PROJECT_DIR$/img" />
       <recent name="$PROJECT_DIR$/img/icons" />
+      <recent name="$PROJECT_DIR$/img/design_skills" />
       <recent name="$PROJECT_DIR$/img/portfolio" />
       <recent name="$PROJECT_DIR$/cv" />
-      <recent name="$PROJECT_DIR$/fonts" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -96,6 +87,7 @@
       <workItem from="1699526826003" duration="15000" />
       <workItem from="1700584020314" duration="366000" />
       <workItem from="1700584930527" duration="8463000" />
+      <workItem from="1700654758421" duration="10254000" />
     </task>
     <servers />
   </component>
