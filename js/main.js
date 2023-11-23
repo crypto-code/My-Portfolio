@@ -113,6 +113,10 @@ function openSection(sectionId) {
     $("html").animate({scrollTop: 0}, 500);
 }
 
+function openLink(url) {
+    window.open(url, '_blank').focus();
+}
+
 $(document).ready(function(){
     $("#research").load("./components/research.html");
     $("#code").load("./components/code.html");
