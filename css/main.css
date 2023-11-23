@@ -43,116 +43,6 @@ main > section {
     padding: 70px 0;
 }
 
-.btn {
-    border-radius: 0;
-    border: 0;
-    position: relative;
-}
-
-.btn-orange {
-    background-color: #ffa833;
-    box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.15) inset;
-    padding: 15px 55px;
-    color: #fff !important;
-    font-weight: 600;
-    font-size: 15px;
-    border-radius: 10px;
-}
-
-.btn-orange:hover {
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
-    background-color: #ff9900;
-    padding: 15px 55px;
-    color: #fff;
-}
-
-.btn-border {
-    border: 2px solid #fff;
-    color: #fff;
-    padding: 12px 35px;
-}
-
-.bg-blue {
-    background-color: #009EE3;
-}
-
-/* Sweep To Right */
-.btn-effect {
-	vertical-align: middle;
-	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    display: inline-block;
-	position: relative;
-
-	-webkit-transform: translateZ(0);
-	   -moz-transform: translateZ(0);
-		-ms-transform: translateZ(0);
-		 -o-transform: translateZ(0);
-			transform: translateZ(0);
-		  
-	-webkit-backface-visibility: hidden;
-	   -moz-backface-visibility: hidden;
-			backface-visibility: hidden;
-		  
-	-webkit-transition-property: color;
-	   -moz-transition-property: color;
-		-ms-transition-property: color;
-			transition-property: color;
-		  
-	-webkit-transition-duration: 0.3s;
-	   -moz-transition-duration: 0.3s;
-		-ms-transition-duration: 0.3s;
-			transition-duration: 0.3s;
-		  
-	-moz-osx-font-smoothing: grayscale;
-}
-
-.btn-effect:before {
-	content: "";
-	position: absolute;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: #fff;
-	
-	-webkit-transform: scaleX(0);
-	   -moz-transform: scaleX(0);
-		-ms-transform: scaleX(0);
-			transform: scaleX(0);
-			
-	-webkit-transform-origin: 0 50%;
-	   -moz-transform-origin: 0 50%;
-		-ms-transform-origin: 0 50%;
-			transform-origin: 0 50%;
-			
-	-webkit-transition-property: transform;
-	   -moz-transition-property: transform;
-		-ms-transition-property: transform;
-			transition-property: transform;
-			
-	-webkit-transition-duration: 0.3s;
-	   -moz-transition-duration: 0.3s;
-		-ms-transition-duration: 0.3s;
-			transition-duration: 0.3s;
-			
-	-webkit-transition-timing-function: ease-out;
-	   -moz-transition-timing-function: ease-out;
-		-ms-transition-timing-function: ease-out;
-			transition-timing-function: ease-out;
-}
-
-.btn-effect:hover, .btn-effect:focus, .btn-effect:active {
-	color: #009EE3;
-}
-
-.btn-effect:hover:before, .btn-effect:focus:before, .btn-effect:active:before {
-	-webkit-transform: scaleX(1);
-	   -moz-transform: scaleX(1);
-	    -ms-transform: scaleX(1);
-			transform: scaleX(1);
-}
-
 .sec-title {
     margin-bottom: 50px;
 }
@@ -433,7 +323,7 @@ h1.navbar-brand {
 }
 
 .main-research:hover {
-    cursor: context-menu;
+    cursor: pointer;
 }
 
 .main-research .circle {
@@ -469,13 +359,30 @@ h1.navbar-brand {
     left: -6px;
 }
 
+@keyframes circle_animation {
+    0% {
+        transform: rotate(0deg)
+        translateX(10px) rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg)
+        translateX(10px) rotate(360deg);
+    }
+}
+
 .main-research .pointer {
     background-image: url("img/icons/arrow.png");
-    top: 50%;
+    top: 40%;
     left: 85%;
     position: absolute;
     height: 80%;
+    animation: circle_animation 5s infinite linear;
+    display: block;
+
 }
+
+
 
 @keyframes cursor-blink {
     0% {
@@ -496,11 +403,13 @@ h1.navbar-brand {
 ==================================================================*/
 
 #code {
-    background-color: black;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,64,99,1) 36%, rgba(31,72,125,1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
 }
 
 .arrow-button {
@@ -519,10 +428,19 @@ h1.navbar-brand {
     color: #5CF4FE;
 }
 
+.code-cards {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10%;
+    align-items: center;
+}
+
 .code-card {
     background: linear-gradient(#2B2A2A, #2B2A2A00);
     color: white;
-    width: 50%;
+    width: 40%;
     border-radius: 20px;
     padding: 50px;
     display: flex;
@@ -534,10 +452,11 @@ h1.navbar-brand {
     font-size: 40px;
     height: 100%;
     display: flex;
-    gap: 40px;
+    gap: 10px;
     font-weight: 600;
     align-items: center;
     align-content: center;
+    justify-content: space-between;
 }
 
 .code-card .content {
@@ -567,6 +486,14 @@ h1.navbar-brand {
 .skill-card-container {
     display: flex;
     gap: 10px;
+}
+
+.skill-card {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-content: center;
+    align-items: center;
 }
 
 .card-pink {
@@ -712,7 +639,7 @@ h1.navbar-brand {
 ==================================================================*/
 
 #research {
-    background-image: url("../img/research_back.webp");
+    background-image: url("../img/research_back.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -755,6 +682,10 @@ h1.navbar-brand {
     padding: 20px;
 }
 
+.research-card:hover {
+    cursor: pointer;
+}
+
 .research-card img {
     width: 50%;
 }
@@ -794,4 +725,53 @@ h1.navbar-brand {
 .badge-img img {
     height: 100%;
     width: 100%;
+}
+
+/*=================================================================
+	Modal Section
+==================================================================*/
+
+.modal-dialog-centered {
+    display: flex;
+    justify-content: center;
+    height: 90%;
+    align-items: center;
+    width: 50%;
+}
+
+.modal-body-custom {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.modal-content {
+    height: 80%!important;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.modal-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: black;
+}
+
+.pdfview {
+    height: 90%;
+    width: 100%;
+    margin: 10px;
 }

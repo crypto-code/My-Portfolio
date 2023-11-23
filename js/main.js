@@ -115,6 +115,7 @@ function openSection(sectionId) {
 
 $(document).ready(function(){
     $("#research").load("./components/research.html");
+    $("#code").load("./components/code.html");
     var i, tabcontent;
     tabcontent = document.querySelectorAll(".tabcontent-hidden");
     for (i = 0; i < tabcontent.length; i++) {

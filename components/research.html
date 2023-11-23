@@ -11,7 +11,7 @@
 </div>
 
 <div class="research-cards">
-  <div class="research-card">
+  <div class="research-card" data-toggle="modal" data-target="#mullamaModal">
     <img src="img/research/MU-LLaMA.png"/>
     <div class="title">
       MU-LLaMA
@@ -38,7 +38,7 @@
     </div>
   </div>
 
-  <div class="research-card">
+  <div class="research-card" data-toggle="modal" data-target="#m2ugenModal">
     <img src="img/research/M2UGen.png"/>
     <div class="title">
       M<sup>2</sup>UGen
@@ -52,11 +52,27 @@
     </div>
     <div class="badge">
       <div class="badge-img" >
-        <a href="https://arxiv.org/abs/2311.11255"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red" ></a>
+        <a href="https://arxiv.org/abs/2311.11255"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red"></a>
       </div>
       <div class="badge-img" >
         <a href="https://huggingface.co/papers/2311.11255"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-blue" ></a>
       </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="m2ugenModal" tabindex="-1" role="dialog" aria-labelledby="m2ugenModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="width: 100%; height: 100%">
+      <object data="/papers/2311.11255.pdf" class="pdfview" type="application/pdf" width="100%" height="100%"></object>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="mullamaModal" tabindex="-1" role="dialog" aria-labelledby="mullamaModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content" style="width: 100%; height: 100%">
+      <object data="/papers/2308.11276.pdf" class="pdfview" type="application/pdf" width="100%" height="100%"></object>
     </div>
   </div>
 </div>
