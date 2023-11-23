@@ -226,13 +226,10 @@ h1.navbar-brand {
     position: relative;
     padding: 0;
     height: 100vh;
-    background: rgb(104,0,189);
-    background: linear-gradient(0deg, rgb(84, 1, 152) 0%, rgba(28,2,147,1) 29%, rgb(22, 76, 155) 100%);
-    /*background-image: url("../img/back.jpeg");*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*background-attachment: fixed;*/
-    /*background-position: center top;*/
+    /*background: rgb(104,0,189);*/
+    /*background: linear-gradient(0deg, rgb(84, 1, 152) 0%, rgba(28,2,147,1) 29%, rgb(22, 76, 155) 100%);*/
+    background: #6B82EB;
+    background: radial-gradient(circle, rgba(107, 130, 235, 0.5) 0%, rgba(0,0,0,1) 78%);
     transition: background-color 1s linear, opacity 1s linear;
 }
 
@@ -277,6 +274,21 @@ h1.navbar-brand {
     width: 100%;
     margin: auto;
     z-index: 11;
+    justify-content: center;
+    align-items: center;
+}
+
+.caption-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.caption-content-container img {
+    height: 20%;
+    vertical-align: center;
 }
 
 .slide-caption .caption-content {
@@ -285,8 +297,6 @@ h1.navbar-brand {
     width: fit-content;
     margin: auto;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 .caption-content h2 {
@@ -299,7 +309,7 @@ h1.navbar-brand {
 .caption-content .h3 {
     color: white;
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 600;
     width: fit-content;
     display: flex;
     gap: 10px;
@@ -317,7 +327,7 @@ h1.navbar-brand {
 }
 
 .h3 .main-research {
-    color: #d763fa;
+    color: #eaa2d2;
     padding: 5px;
     position: relative;
 }
@@ -394,7 +404,7 @@ h1.navbar-brand {
     padding-left: 5px;
     width: 8px;
     height: 20px;
-    background: #0095ff;
+    background: #0167FF;
     animation: cursor-blink 1s steps(2) infinite;
 }
 
@@ -403,8 +413,8 @@ h1.navbar-brand {
 ==================================================================*/
 
 #code {
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(39,64,99,1) 36%, rgba(31,72,125,1) 100%);
+    background: #1a5773;
+    background: linear-gradient(180deg, #1a5773 50%, #012d3a 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -442,15 +452,17 @@ h1.navbar-brand {
 }
 
 .code-card {
-    background: linear-gradient(#2B2A2A, rgba(43, 42, 42, 0.33));
+    background: linear-gradient(180deg, rgba(43,42,43,1) 0%, rgba(5,75,108,1) 100%);
     color: white;
+    box-shadow: 10px 10px rgba(43,42,43,0.3);
+    border: #002a3d 5px solid;
     width: 95%;
     border-radius: 20px;
     padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
-    margin: 20px;
+    margin-bottom: 30px;
     break-inside: avoid;
 }
 
@@ -653,7 +665,7 @@ h1.navbar-brand {
 ==================================================================*/
 
 #research {
-    background-image: url("../img/research_back.png");
+    background-image: radial-gradient(circle, rgba(234,162,210,0.4) 0%, rgba(0,0,0,1) 90%), url("../img/research_back.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -670,6 +682,7 @@ h1.navbar-brand {
     font-size: 52px;
     font-weight: 700;
     color: white;
+    margin-bottom: 5%;
 }
 
 .research-cards {
@@ -680,7 +693,7 @@ h1.navbar-brand {
     justify-content: center;
     align-self: center;
     align-items: center;
-    gap: 50px;
+    gap: 5%;
 }
 
 .research-card {
@@ -693,7 +706,9 @@ h1.navbar-brand {
     justify-content: center;
     text-align: center;
     gap: 20px;
-    padding: 20px;
+    padding: 10px;
+    box-shadow: 10px 10px rgba(43,42,43,0.3);
+    border: rgba(138, 26, 101, 0.43) 5px solid;
 }
 
 .research-card:hover {
