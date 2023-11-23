@@ -409,7 +409,7 @@ h1.navbar-brand {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    height: fit-content;
 }
 
 .arrow-button {
@@ -430,24 +430,28 @@ h1.navbar-brand {
 
 .code-cards {
     width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10%;
-    align-items: center;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*flex-wrap: wrap;*/
+    gap: 5%;
+    columns: 2 30vh;
+    /*margin: auto;*/
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+    /*align-content: space-between;*/
 }
 
 .code-card {
     background: linear-gradient(#2B2A2A, rgba(43, 42, 42, 0.33));
     color: white;
-    width: 38%;
+    width: 100%;
     border-radius: 20px;
     padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
     margin: 20px;
+    break-inside: avoid;
 }
 
 .code-card .title {
@@ -516,6 +520,10 @@ h1.navbar-brand {
 
 .card-red {
     background: linear-gradient(#fa3131, #f56b6b);
+}
+
+.card-green {
+    background: linear-gradient(#156400, #56964b);
 }
 
 /*=================================================================
