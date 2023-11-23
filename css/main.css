@@ -435,17 +435,19 @@ h1.navbar-brand {
     flex-wrap: wrap;
     gap: 10%;
     align-items: center;
+    justify-content: center;
 }
 
 .code-card {
-    background: linear-gradient(#2B2A2A, #2B2A2A00);
+    background: linear-gradient(#2B2A2A, rgba(43, 42, 42, 0.33));
     color: white;
-    width: 40%;
+    width: 38%;
     border-radius: 20px;
     padding: 50px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin: 20px;
 }
 
 .code-card .title {
@@ -506,6 +508,10 @@ h1.navbar-brand {
 
 .card-blue {
     background: linear-gradient(#0224fc, #8086fe);
+}
+
+.card-lightblue {
+    background: linear-gradient(#029cfc, #02e7fc);
 }
 
 .card-red {
