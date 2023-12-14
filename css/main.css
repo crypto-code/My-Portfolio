@@ -387,7 +387,7 @@ h1.navbar-brand {
     left: 85%;
     position: absolute;
     height: 80%;
-    animation: circle_animation 5s infinite linear;
+    animation: circle_animation 2s infinite linear;
     display: block;
 
 }
