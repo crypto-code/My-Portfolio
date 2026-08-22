@@ -14,7 +14,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -29,8 +29,9 @@
 
 <body class="index-page">
 
+  <i class="header-toggle d-xl-none bi bi-list"></i>
+
   <header id="header" class="header dark-background d-flex flex-column">
-    <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
       <img src="assets/img/my-profile-img.jpg" alt="" class="img-fluid rounded-circle">
@@ -85,83 +86,118 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/research_back.webp" alt="" data-aos="fade-in" fetchpriority="high">
+      <img src="assets/img/research_back.webp" alt="Background" class="hero-bg-img" data-aos="fade-in" fetchpriority="high">
+      <div class="hero-overlay"></div>
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <h2>Atin Sakkeer Hussain</h2>
-        <p>I'm an AI <span class="typed" data-typed-items="Developer, Researcher"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+      <div class="container hero-content" data-aos="fade-up" data-aos-delay="100">
+        <div class="hero-status-pill">
+          <span class="status-dot"></span>
+          <span>AI Researcher &amp; Machine Learning Engineer</span>
+        </div>
+        <h1 class="hero-title">Atin Sakkeer Hussain</h1>
+        <p class="hero-subtitle">Focusing on <span class="typed" data-typed-items="Multi-Modal LLMs, Generative AI & Music, Data Analytics Reasoning, Autonomous Agents"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+
+        <div class="hero-actions">
+          <a href="#research" class="btn-primary-glow"><i class="bi bi-journal-bookmark-fill me-2"></i>Explore Research</a>
+          <a href="#portfolio" class="btn-glass"><i class="bi bi-grid-fill me-2"></i>View Projects</a>
+          <a href="https://github.com/crypto-code" target="_blank" rel="noopener noreferrer" class="btn-glass-icon" title="GitHub Profile"><i class="bi bi-github"></i></a>
+        </div>
       </div>
 
     </section><!-- /Hero Section -->
 
     <!-- About Section -->
-    <section id="about" class="about section light-background">
+    <section id="about" class="about section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>About</h2>
-        <p>I am a passionate AI enthusiast passionate about pushing the boundaries of technology and creativity.</p>
+        <h2>About Me</h2>
+        <p>Pioneering multi-modal intelligence, generative systems, and automated reasoning at the intersection of theory and real-world scale.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="Atin Sakkeer Hussain" loading="lazy" decoding="async">
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-4 text-center">
+            <div class="about-avatar-card">
+              <img src="assets/img/my-profile-img.jpg" class="img-fluid rounded-4" alt="Atin Sakkeer Hussain" loading="lazy" decoding="async">
+              <div class="about-avatar-badge">
+                <i class="bi bi-mortarboard-fill me-1"></i> Graduate Researcher
+              </div>
+            </div>
           </div>
           <div class="col-lg-8 content">
-            <h2>AI Researcher & Developer.</h2>
-            <p class="fst-italic py-3">
-              My work spans cutting-edge areas like Recommendation Systems, Multi-modal Understanding and Generative AI, with impactful research on LLMs for Music Understanding and Generation, as well as LLMs for Data Analytics, resulting in multiple publications.
-              Combining technical expertise with a visionary approach, I thrive on solving complex challenges and creating innovative solutions that bridge disciplines and inspire progress.
+            <h3 class="about-headline">AI Researcher &amp; Machine Learning Engineer</h3>
+            <p class="about-lead">
+              My work spans cutting-edge domains including <strong>Multi-Modal LLMs</strong>, <strong>Generative Audio &amp; Music Understanding</strong>, and <strong>Automated Multi-Step Data Analytics Reasoning</strong>. I have published novel architectures and benchmark datasets (such as MU-LLaMA and ARTEMIS-DA) resulting in multiple high-impact publications.
             </p>
-            <!-- Stats Section -->
-            <div id="stats" class="stats section">
+            <p class="about-subtext">
+              Combining rigorous deep learning research with end-to-end engineering excellence, I thrive on building scalable AI models that push boundaries across perception, generation, and complex reasoning.
+            </p>
 
-              <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="about-tags d-flex flex-wrap gap-2 pt-2 pb-4">
+              <span class="tech-chip"><i class="bi bi-cpu me-1"></i> Multi-Modal LLMs</span>
+              <span class="tech-chip"><i class="bi bi-music-note-beamed me-1"></i> Music &amp; Audio Gen</span>
+              <span class="tech-chip"><i class="bi bi-graph-up-arrow me-1"></i> LLM Data Analytics</span>
+              <span class="tech-chip"><i class="bi bi-controller me-1"></i> Reinforcement Learning</span>
+              <span class="tech-chip"><i class="bi bi-bezier2 me-1"></i> Neuroevolution / NEAT</span>
+            </div>
 
-                <div class="row gy-4">
+            <!-- Stats Bento Grid -->
+            <div id="stats" class="stats">
+              <div class="row g-3">
 
-                  <div class="col-lg-3 col-md-6">
-                    <div class="stats-item">
-                      <i class="bi bi-journal-bookmark"></i>
-                      <span id="scholar-papers-auto" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
-                      <p><strong>Research Papers</strong> <span>published</span></p>
+                <div class="col-6 col-md-3">
+                  <div class="bento-stat-card">
+                    <div class="stat-icon-wrap icon-blue">
+                      <i class="bi bi-journal-bookmark-fill"></i>
                     </div>
-                  </div><!-- End Stats Item -->
-
-                  <div class="col-lg-3 col-md-6">
-                    <div class="stats-item">
-                      <i class="bi bi-patch-check"></i>
-                      <span id="scholar-citations-auto" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                      <p><strong>Citations</strong> <span>on papers</span></p>
+                    <div class="stat-number">
+                      <span id="scholar-papers-auto" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter">5</span>
                     </div>
-                  </div><!-- End Stats Item -->
+                    <div class="stat-label">Research Papers</div>
+                  </div>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <div class="stats-item">
+                <div class="col-6 col-md-3">
+                  <div class="bento-stat-card">
+                    <div class="stat-icon-wrap icon-cyan">
+                      <i class="bi bi-patch-check-fill"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span id="scholar-citations-auto" data-purecounter-start="0" data-purecounter-end="187" data-purecounter-duration="1" class="purecounter">187</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">Citations</div>
+                  </div>
+                </div>
+
+                <div class="col-6 col-md-3">
+                  <div class="bento-stat-card">
+                    <div class="stat-icon-wrap icon-purple">
                       <i class="bi bi-github"></i>
-                      <span id="github-repos-auto" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                      <p><strong>Projects</strong> <span>public on GitHub</span></p>
                     </div>
-                  </div><!-- End Stats Item -->
+                    <div class="stat-number">
+                      <span id="github-repos-auto" data-purecounter-start="0" data-purecounter-end="39" data-purecounter-duration="1" class="purecounter">39</span>
+                    </div>
+                    <div class="stat-label">GitHub Repos</div>
+                  </div>
+                </div>
 
-                  <div class="col-lg-3 col-md-6">
-                    <div class="stats-item">
+                <div class="col-6 col-md-3">
+                  <div class="bento-stat-card">
+                    <div class="stat-icon-wrap icon-amber">
                       <i class="bi bi-star-fill"></i>
-                      <span id="github-stars-auto" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                      <p><strong>Stars Earned</strong> <span>on GitHub</span></p>
                     </div>
-                  </div><!-- End Stats Item -->
-
+                    <div class="stat-number">
+                      <span id="github-stars-auto" data-purecounter-start="0" data-purecounter-end="527" data-purecounter-duration="1" class="purecounter">527</span><span class="stat-plus">+</span>
+                    </div>
+                    <div class="stat-label">Stars Earned</div>
+                  </div>
                 </div>
 
               </div>
-            </div><!-- /Stats Section -->
-<!--            <p class="py-3">-->
-<!--              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.-->
-<!--              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque.-->
-<!--            </p>-->
+            </div><!-- /Stats Bento Grid -->
+
           </div>
         </div>
 
@@ -174,62 +210,114 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-        <p>Skills include AI, Machine Learning, Data Analytics and various Programming Languages with different levels of proficiency.</p>
+        <h2>Technical Expertise</h2>
+        <p>A comprehensive toolkit developed through years of cutting-edge AI research and end-to-end systems engineering.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row skills-content skills-animation">
+        <div class="row g-4">
 
+          <!-- Category 1 -->
           <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>AI & Machine Learning</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-badge icon-cyan">
+                  <i class="bi bi-cpu-fill"></i>
+                </div>
+                <div>
+                  <h4 class="skill-card-title">Multi-Modal AI &amp; Generative LLMs</h4>
+                  <p class="skill-card-subtitle">Architecture design, fine-tuning &amp; evaluation</p>
+                </div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Data Analytics</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="skill-pill-wrap">
+                <span class="skill-pill highlight"><i class="bi bi-stars"></i> LLaMA / MU-LLaMA</span>
+                <span class="skill-pill highlight"><i class="bi bi-fire"></i> PyTorch</span>
+                <span class="skill-pill"><i class="bi bi-robot"></i> Hugging Face</span>
+                <span class="skill-pill">Transformers</span>
+                <span class="skill-pill">AudioLDM 2</span>
+                <span class="skill-pill">MusicGen</span>
+                <span class="skill-pill">MERT Audio</span>
+                <span class="skill-pill">Diffusion Models</span>
+                <span class="skill-pill">Multi-Modal QA</span>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Advanced Algorithms</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
+            </div>
           </div>
 
+          <!-- Category 2 -->
           <div class="col-lg-6">
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-badge icon-blue">
+                  <i class="bi bi-diagram-3-fill"></i>
+                </div>
+                <div>
+                  <h4 class="skill-card-title">Data Analytics &amp; LLM Reasoning</h4>
+                  <p class="skill-card-subtitle">Automated insight synthesis &amp; code generation</p>
+                </div>
               </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>C/C++</span> <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+              <div class="skill-pill-wrap">
+                <span class="skill-pill highlight"><i class="bi bi-gear-wide-connected"></i> ARTEMIS-DA</span>
+                <span class="skill-pill highlight">Multi-Step Synthesis</span>
+                <span class="skill-pill">Dynamic Code Execution</span>
+                <span class="skill-pill">LangChain</span>
+                <span class="skill-pill">LlamaIndex</span>
+                <span class="skill-pill">Tabular Reasoning</span>
+                <span class="skill-pill">Pandas &amp; NumPy</span>
+                <span class="skill-pill">SQL &amp; Vector DBs</span>
               </div>
-            </div><!-- End Skills Item -->
+            </div>
+          </div>
 
-            <div class="progress">
-              <span class="skill"><span>React JS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+          <!-- Category 3 -->
+          <div class="col-lg-6">
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-badge icon-purple">
+                  <i class="bi bi-controller"></i>
+                </div>
+                <div>
+                  <h4 class="skill-card-title">Reinforcement Learning &amp; Genetic AI</h4>
+                  <p class="skill-card-subtitle">Agent simulation &amp; neuroevolution systems</p>
+                </div>
               </div>
-            </div><!-- End Skills Item -->
+              <div class="skill-pill-wrap">
+                <span class="skill-pill highlight">Actor-Critic Models</span>
+                <span class="skill-pill highlight">NEAT Algorithm</span>
+                <span class="skill-pill">Deep Q-Networks</span>
+                <span class="skill-pill">Gym / OpenAI Gym</span>
+                <span class="skill-pill">Genetic Algorithms</span>
+                <span class="skill-pill">Hopfield Networks</span>
+                <span class="skill-pill">AutoEncoders / VAE</span>
+                <span class="skill-pill">Unity 2D/3D Sim</span>
+              </div>
+            </div>
+          </div>
 
+          <!-- Category 4 -->
+          <div class="col-lg-6">
+            <div class="skill-category-card">
+              <div class="skill-card-header">
+                <div class="skill-icon-badge icon-emerald">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <div>
+                  <h4 class="skill-card-title">Languages, Systems &amp; Frameworks</h4>
+                  <p class="skill-card-subtitle">Core programming, full-stack &amp; tooling</p>
+                </div>
+              </div>
+              <div class="skill-pill-wrap">
+                <span class="skill-pill highlight">Python (Expert)</span>
+                <span class="skill-pill highlight">C / C++</span>
+                <span class="skill-pill">CUDA</span>
+                <span class="skill-pill">Lua</span>
+                <span class="skill-pill">React JS / Node</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Git / GitHub Actions</span>
+                <span class="skill-pill">Linux / Shell</span>
+                <span class="skill-pill">LaTeX</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -314,12 +402,12 @@
 <!--    </section>&lt;!&ndash; /Resume Section &ndash;&gt;-->
 
     <!-- Research Section -->
-    <section id="research" class="research section light-background">
+    <section id="research" class="research section">
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Research</h2>
-        <p>My Research papers with State of the Art Models in the field of Data Analytics and Music Understanding and Generation.</p>
+        <h2>Published Research</h2>
+        <p>State-of-the-art models in Multi-Modal Music Understanding &amp; Generation and LLM-Driven Data Analytics.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -433,8 +521,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
-        <p>Some GitHub Projects that demonstrate proficiency in AI and Machine Learning applications.</p>
+        <h2>Featured Projects</h2>
+        <p>Selected open-source AI models, simulations, and intelligent agents built with deep learning &amp; genetic algorithms.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
