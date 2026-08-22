@@ -50,10 +50,49 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
+    const removePreloader = () => {
+      if (!preloader.classList.contains('loaded')) {
+        preloader.classList.add('loaded');
+        setTimeout(() => {
+          if (preloader.parentNode) {
+            preloader.remove();
+          }
+        }, 400);
+      }
+    };
+
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      removePreloader();
+    } else {
+      document.addEventListener('DOMContentLoaded', removePreloader);
+    }
+    window.addEventListener('load', removePreloader);
+    // Safety fallback: ensure preloader does not block page beyond 400ms
+    setTimeout(removePreloader, 400);
   }
+
+  /**
+   * Per-card image loading state (Shimmer & Spinner placeholder)
+   */
+  const cardContainers = document.querySelectorAll('.portfolio-content, .research-content');
+  cardContainers.forEach(container => {
+    const img = container.querySelector('img');
+    if (!img) return;
+
+    const markLoaded = () => {
+      img.classList.add('loaded');
+      container.classList.remove('img-loading');
+      container.classList.add('img-loaded');
+    };
+
+    if (img.complete && img.naturalWidth !== 0) {
+      markLoaded();
+    } else {
+      container.classList.add('img-loading');
+      img.addEventListener('load', markLoaded);
+      img.addEventListener('error', markLoaded);
+    }
+  });
 
   /**
    * Scroll top button
@@ -86,6 +125,11 @@
       once: true,
       mirror: false
     });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', aosInit);
+  } else {
+    aosInit();
   }
   window.addEventListener('load', aosInit);
 
@@ -135,22 +179,28 @@
   });
 
   /**
-   * Init isotope layout and filters
+   * Init isotope layout and filters with progressive image loading support
    */
   document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+    let container = isotopeItem.querySelector('.isotope-container');
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
-      });
+    if (!container) return;
+
+    let initIsotope = new Isotope(container, {
+      itemSelector: '.isotope-item',
+      layoutMode: layout,
+      filter: filter,
+      sortBy: sort
     });
+
+    if (typeof imagesLoaded !== 'undefined') {
+      imagesLoaded(container).on('progress', function() {
+        initIsotope.layout();
+      });
+    }
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
@@ -227,6 +277,38 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
   // Auto update functions
+  async function getScholarStats(authorId) {
+    try {
+      const response = await fetch(`https://api.semanticscholar.org/graph/v1/author/${authorId}?fields=paperCount,citationCount`);
+      if (!response.ok) throw new Error(`Semantic Scholar API Error: ${response.statusText}`);
+      const data = await response.json();
+      return {
+        citationCount: data.citationCount ?? 0,
+        paperCount: 5
+      };
+    } catch (error) {
+      console.warn("Could not fetch Scholar stats, using fallback:", error);
+      return {
+        citationCount: 72,
+        paperCount: 5
+      };
+    }
+  }
+
+  // Fetch Scholar Stats (Author ID: 2232951291 - Atin Sakkeer Hussain)
+  getScholarStats("2232951291").then((data) => {
+    if (!data) return;
+    const papersElement = document.getElementById("scholar-papers-auto");
+    const citationsElement = document.getElementById("scholar-citations-auto");
+    if (papersElement) papersElement.setAttribute("data-purecounter-end", `${data.paperCount}`);
+    if (citationsElement) citationsElement.setAttribute("data-purecounter-end", `${data.citationCount}`);
+    if (typeof PureCounter !== "undefined") {
+      new PureCounter();
+    }
+  }).catch((err) => {
+    console.warn("Could not retrieve Scholar stats:", err);
+  });
+
   async function getGitHubStats(username) {
     let url = `https://api.github.com/users/${username}/repos`;
     let totalStars = 0;
@@ -257,16 +339,19 @@
   }
 
   // Example usage:
-  getGitHubStats("crypto-code").then(({totalRepos, totalStars}) => {
-    console.log()
+  getGitHubStats("crypto-code").then((data) => {
+    if (!data) return;
+    const { totalRepos, totalStars } = data;
     const repoElement = document.getElementById("github-repos-auto");
     const starElement = document.getElementById("github-stars-auto");
-    repoElement.setAttribute("data-purecounter-end", `${totalRepos}`);
-    starElement.setAttribute("data-purecounter-end", `${totalStars}`);
+    if (repoElement) repoElement.setAttribute("data-purecounter-end", `${totalRepos}`);
+    if (starElement) starElement.setAttribute("data-purecounter-end", `${totalStars}`);
     if (typeof PureCounter !== "undefined") {
       new PureCounter();
     }
-  })
+  }).catch((err) => {
+    console.warn("Could not retrieve GitHub stats:", err);
+  });
 
 
 

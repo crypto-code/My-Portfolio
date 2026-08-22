@@ -43,11 +43,11 @@
     </a>
 
     <div class="social-links text-center">
-      <a href="https://www.linkedin.com/in/atin-sakkeer-hussain-7054631a6/" target="_blank" rel="noopener noreferrer" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AFix5MY6ms_q_r86I0sVrgmunxf2bwffoEv4oFqiSDYPJA4857EHj1O6hqqxGyJO2GYMV0jNZpQkVeibkNPP1eY9HZHgGEBY8LhpXZY5wLNP&user=DARNIXMAAAAJ" target="_blank" rel="noopener noreferrer" class="google-scholar"><i class="bi bi-google"></i></a>
-      <a href="https://github.com/crypto-code" target="_blank" rel="noopener noreferrer" class="github"><i class="bi bi-github"></i></a>
-      <a href="https://paperswithcode.com/search?q=author%3AAtin+Sakkeer+Hussain&order_by=stars" target="_blank" rel="noopener noreferrer" class="paperswithcode"><i class="bi bi-journal-code"></i></a>
-      <a href="https://orcid.org/0009-0002-6513-861X" target="_blank" rel="noopener noreferrer" class="orcid"><i class="bi bi-person-circle"></i></a>
+      <a href="https://www.linkedin.com/in/atin-sakkeer-hussain-7054631a6/" target="_blank" rel="noopener noreferrer" class="linkedin" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      <a href="https://scholar.google.com/citations?hl=en&view_op=list_works&gmla=AFix5MY6ms_q_r86I0sVrgmunxf2bwffoEv4oFqiSDYPJA4857EHj1O6hqqxGyJO2GYMV0jNZpQkVeibkNPP1eY9HZHgGEBY8LhpXZY5wLNP&user=DARNIXMAAAAJ" target="_blank" rel="noopener noreferrer" class="google-scholar" title="Google Scholar"><i class="bi bi-google"></i></a>
+      <a href="https://github.com/crypto-code" target="_blank" rel="noopener noreferrer" class="github" title="GitHub"><i class="bi bi-github"></i></a>
+      <a href="https://huggingface.co/crypto-code" target="_blank" rel="noopener noreferrer" class="huggingface" title="Hugging Face"><i class="bi bi-robot"></i></a>
+      <a href="https://orcid.org/0009-0002-6513-861X" target="_blank" rel="noopener noreferrer" class="orcid" title="ORCID"><i class="bi bi-person-circle"></i></a>
     </div>
 
     <nav id="navmenu" class="navmenu">
@@ -85,7 +85,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/research_back.png" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/research_back.webp" alt="" data-aos="fade-in" fetchpriority="high">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h2>Atin Sakkeer Hussain</h2>
@@ -107,7 +107,7 @@
 
         <div class="row gy-4 justify-content-center">
           <div class="col-lg-4">
-            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/my-profile-img.jpg" class="img-fluid" alt="Atin Sakkeer Hussain" loading="lazy" decoding="async">
           </div>
           <div class="col-lg-8 content">
             <h2>AI Researcher & Developer.</h2>
@@ -125,7 +125,7 @@
                   <div class="col-lg-3 col-md-6">
                     <div class="stats-item">
                       <i class="bi bi-journal-bookmark"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
+                      <span id="scholar-papers-auto" data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
                       <p><strong>Research Papers</strong> <span>published</span></p>
                     </div>
                   </div><!-- End Stats Item -->
@@ -133,7 +133,7 @@
                   <div class="col-lg-3 col-md-6">
                     <div class="stats-item">
                       <i class="bi bi-patch-check"></i>
-                      <span data-purecounter-start="0" data-purecounter-end="72" data-purecounter-duration="1" class="purecounter"></span>
+                      <span id="scholar-citations-auto" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
                       <p><strong>Citations</strong> <span>on papers</span></p>
                     </div>
                   </div><!-- End Stats Item -->
@@ -142,7 +142,7 @@
                     <div class="stats-item">
                       <i class="bi bi-github"></i>
                       <span id="github-repos-auto" data-purecounter-start="0" data-purecounter-end="0" data-purecounter-duration="1" class="purecounter"></span>
-                      <p><strong>Porjects</strong> <span>public on GitHub</span></p>
+                      <p><strong>Projects</strong> <span>public on GitHub</span></p>
                     </div>
                   </div><!-- End Stats Item -->
 
@@ -329,7 +329,7 @@
 
             <div class="col-lg-4 col-md-6 research-item isotope-item filter-vision">
               <div class="research-content h-100">
-                <img src="assets/img/research/MU-LLaMA.png" class="img-fluid" alt="">
+                <img src="assets/img/research/MU-LLaMA.png" class="img-fluid" alt="MU-LLaMA" loading="lazy" decoding="async">
                 <div class="research-info">
                   <h4>MU-LLaMA</h4>
                   <p>Music Understanding LLaMA: Advancing Text-to-Music Generation with Question Answering and Captioning</p>
@@ -345,16 +345,14 @@
                       The experiments demonstrate that the proposed MU-LLaMA model, trained on our designed MusicQA dataset, achieves outstanding performance in both music question answering and music caption generation across various metrics, outperforming current state-of-the-art (SOTA) models in both fields and offering a promising advancement in the T2M-Gen research field.
                     </p>
                     <div class="badge">
-                      <div class="badge-img" >
-                        <a href="https://arxiv.org/abs/2308.11276" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red"></a>
+                      <div class="badge-img">
+                        <a href="https://arxiv.org/abs/2308.11276" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red" loading="lazy"></a>
                       </div>
-                      <div class="badge-img" >
-                        <a href="https://huggingface.co/datasets/mu-llama/MusicQA" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-MusicQA%20Dataset-green"></a>
+                      <div class="badge-img">
+                        <a href="https://huggingface.co/papers/2308.11276" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-blue" loading="lazy"></a>
                       </div>
-                      <div class="badge-img" >
-                        <a href="https://paperswithcode.com/sota/music-question-answering-on-musicqa?p=music-understanding-llama-advancing-text-to" target="_blank" rel="noopener noreferrer">
-                          <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/music-understanding-llama-advancing-text-to/music-question-answering-on-musicqa">
-                        </a>
+                      <div class="badge-img">
+                        <a href="https://huggingface.co/datasets/mu-llama/MusicQA" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-MusicQA%20Dataset-green" loading="lazy"></a>
                       </div>
                     </div>
                   </div>
@@ -364,11 +362,11 @@
 
             <div class="col-lg-4 col-md-6 research-item isotope-item filter-vision">
               <div class="research-content h-100">
-                <img src="assets/img/research/MuMu-LLaMA.png" class="img-fluid" alt="">
+                <img src="assets/img/research/MuMu-LLaMA.webp" class="img-fluid" alt="MuMu-LLaMA" loading="lazy" decoding="async">
                 <div class="research-info">
                   <h4>MuMu-LLaMA</h4>
                   <p>MuMu-LLaMA: Multi-modal Music Understanding and Generation via Large Language Models</p>
-                  <a href="assets/img/research/MuMu-LLaMA.png" data-glightbox="title: <h3>MuMu-LLaMA</h3>; description: .mumu-llama-desc; descPosition: right;" data-gallery="research-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/research/MuMu-LLaMA.webp" data-glightbox="title: <h3>MuMu-LLaMA</h3>; description: .mumu-llama-desc; descPosition: right;" data-gallery="research-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://arxiv.org/abs/2412.06660" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc mumu-llama-desc">
                     <p>
@@ -378,11 +376,11 @@
                       Our evaluation across four tasks--music understanding, text-to-music generation, prompt-based music editing, and multi-modal music generation--demonstrates that MuMu-LLaMA outperforms state-of-the-art models, showing its potential for multi-modal music applications.
                     </p>
                     <div class="badge">
-                      <div class="badge-img" >
-                        <a href="https://arxiv.org/abs/2412.06660" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red"></a>
+                      <div class="badge-img">
+                        <a href="https://arxiv.org/abs/2412.06660" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red" loading="lazy"></a>
                       </div>
-                      <div class="badge-img" >
-                        <a href="https://huggingface.co/papers/2311.11255" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-blue" ></a>
+                      <div class="badge-img">
+                        <a href="https://huggingface.co/papers/2412.06660" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-blue" loading="lazy"></a>
                       </div>
                     </div>
                   </div>
@@ -392,11 +390,11 @@
 
             <div class="col-lg-4 col-md-6 research-item isotope-item filter-vision">
               <div class="research-content h-100">
-                <img src="assets/img/research/artemis-da.png" class="img-fluid" alt="">
+                <img src="assets/img/research/artemis-da.webp" class="img-fluid" alt="ARTEMIS-DA" loading="lazy" decoding="async">
                 <div class="research-info">
                   <h4>ARTEMIS-DA</h4>
                   <p>Advanced Reasoning and Transformation Engine for Multi-Step Insight Synthesis in Data Analytics with Large Language Models</p>
-                  <a href="assets/img/research/artemis-da.png" data-glightbox="title: <h3>ARTEMIS-DA</h3>; description: .artemis-da-desc; descPosition: right;" data-gallery="research-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/research/artemis-da.webp" data-glightbox="title: <h3>ARTEMIS-DA</h3>; description: .artemis-da-desc; descPosition: right;" data-gallery="research-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://arxiv.org/abs/2412.14146" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc artemis-da-desc">
                     <p>
@@ -408,17 +406,12 @@
                       By combining the reasoning capabilities of LLMs with automated code generation and execution and visual analysis, ARTEMIS-DA offers a robust, scalable solution for multi-step insight synthesis, addressing a wide range of challenges in data analytics.
                     </p>
                     <div class="badge">
-                      <div class="badge-img" >
-                        <a href="https://arxiv.org/abs/2412.14146" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red"></a>
+                      <div class="badge-img">
+                        <a href="https://arxiv.org/abs/2412.14146" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/%F0%9F%93%8E%20arXiv-Paper-red" loading="lazy"></a>
                       </div>
                       <div class="badge-img">
-                        <a href="https://paperswithcode.com/sota/table-based-fact-verification-on-tabfact?p=advanced-reasoning-and-transformation-engine" target="_blank" rel="noopener noreferrer">
-                          <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/advanced-reasoning-and-transformation-engine/table-based-fact-verification-on-tabfact" >
-                        </a>
-                      </div>
-                      <div class="badge-img">
-                        <a href="https://paperswithcode.com/sota/semantic-parsing-on-wikitablequestions?p=advanced-reasoning-and-transformation-engine" target="_blank" rel="noopener noreferrer">
-                          <img src="https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/advanced-reasoning-and-transformation-engine/semantic-parsing-on-wikitablequestions" >
+                        <a href="https://www.semanticscholar.org/paper/ARTEMIS-DA%3A-An-Advanced-Reasoning-and-Engine-for-in-Hussain-Zeng/e5fa1fa5aa161eef81f215d2a843bb35c363999c" target="_blank" rel="noopener noreferrer">
+                          <img src="https://img.shields.io/badge/Semantic%20Scholar-Paper-1e88e5?logo=semanticscholar&logoColor=white" loading="lazy">
                         </a>
                       </div>
                     </div>
@@ -459,11 +452,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vision">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/StyleTransfer.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/StyleTransfer.webp" class="img-fluid" alt="Style Transfer" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Style Transfer</h4>
                   <p>An AI Model to transfer painting styles to images</p>
-                  <a href="assets/img/projects/StyleTransfer.jpg" data-glightbox="title: <h3>Style Transfer</h3>; description: .style-transfer-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/StyleTransfer.webp" data-glightbox="title: <h3>Style Transfer</h3>; description: .style-transfer-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Style-Transfer" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc style-transfer-desc">
                     <p>
@@ -477,11 +470,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vision">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/DeepDream.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/DeepDream.webp" class="img-fluid" alt="Deep Dream" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Deep Dream</h4>
                   <p>Enhance Patterns in Images via Algorithmic Pareidolia</p>
-                  <a href="assets/img/projects/DeepDream.gif" data-glightbox="title: <h3>Deep Dream</h3>; description: .deep-dream-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/DeepDream.webp" data-glightbox="title: <h3>Deep Dream</h3>; description: .deep-dream-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Deep-Dream" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc deep-dream-desc">
                     <p>
@@ -495,11 +488,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-rl">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/Atari.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/Atari.webp" class="img-fluid" alt="Atari AI" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Atari AI</h4>
                   <p>Use Reinforcement Learning to Play the Atari Gym</p>
-                  <a href="assets/img/projects/Atari.gif" data-glightbox="title: <h3>Atari AI</h3>; description: .atari-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/Atari.webp" data-glightbox="title: <h3>Atari AI</h3>; description: .atari-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Atari-AI" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc atari-desc">
                     <p>
@@ -513,11 +506,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-genetic">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/MarioAI.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/MarioAI.webp" class="img-fluid" alt="Mario AI" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Mario AI</h4>
                   <p>Genetic Algorithm to Train Mario</p>
-                  <a href="assets/img/projects/MarioAI.gif" data-glightbox="title: <h3>Mario AI</h3>; description: .mario-ai-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/MarioAI.webp" data-glightbox="title: <h3>Mario AI</h3>; description: .mario-ai-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Mario-AI" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc mario-ai-desc">
                     <p>
@@ -531,11 +524,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-genetic">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/SmartCars.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/SmartCars.webp" class="img-fluid" alt="Smart Cars" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Smart Cars</h4>
                   <p>Genetic Algorithm to Train Cars on a Race Course</p>
-                  <a href="assets/img/projects/SmartCars.gif" data-glightbox="title: <h3>Smart Cars</h3>; description: .smart-cars-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/SmartCars.webp" data-glightbox="title: <h3>Smart Cars</h3>; description: .smart-cars-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Smart-Cars" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc smart-cars-desc">
                     <p>
@@ -550,11 +543,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vision">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/LSV.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/LSV.webp" class="img-fluid" alt="Latent Space Visualization" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Latent Space Visualization</h4>
                   <p>Visualize the Latent Space of an AutoEncoder model</p>
-                  <a href="assets/img/projects/LSV.gif" data-glightbox="title: <h3>Latent Space Visualization</h3>; description: .lsv-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/LSV.webp" data-glightbox="title: <h3>Latent Space Visualization</h3>; description: .lsv-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Latent-Space-Visualization" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc lsv-desc">
                     <p>
@@ -568,11 +561,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vision">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/SelfDriving.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/SelfDriving.webp" class="img-fluid" alt="Self-Driving Car" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Self-Driving Car</h4>
                   <p>Train a Self-Driving Car using the view Camera</p>
-                  <a href="assets/img/projects/SelfDriving.gif" data-glightbox="title: <h3>Self-Driving Car</h3>; description: .self-driving-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/SelfDriving.webp" data-glightbox="title: <h3>Self-Driving Car</h3>; description: .self-driving-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Udacity-Self-Driving-Car" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc self-driving-desc">
                     <p>
@@ -585,11 +578,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-rl">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/StockMarket.png" class="img-fluid" alt="">
+                <img src="assets/img/projects/StockMarket.webp" class="img-fluid" alt="Stock Market AI" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Stock Market AI</h4>
                   <p>Stock Market Prediction & Trading Bot using AI</p>
-                  <a href="assets/img/projects/StockMarket.png" data-glightbox="title: <h3>Stock Market AI</h3>; description: .stock-market-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/StockMarket.webp" data-glightbox="title: <h3>Stock Market AI</h3>; description: .stock-market-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Stock-Market-AI-GUI" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc stock-market-desc">
                     <p>
@@ -602,11 +595,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-genetic">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/DinoGame.gif" class="img-fluid" alt="">
+                <img src="assets/img/projects/DinoGame.webp" class="img-fluid" alt="Dino Game" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Dino Game</h4>
                   <p>Genetic Algorithm to Train an AI for the Dino Game</p>
-                  <a href="assets/img/projects/DinoGame.gif" data-glightbox="title: <h3>Dino Game</h3>; description: .dino-game-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/DinoGame.webp" data-glightbox="title: <h3>Dino Game</h3>; description: .dino-game-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/DinoGame" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc dino-game-desc">
                     <p>
@@ -619,11 +612,11 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vision">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/VAE.jpg" class="img-fluid" alt="">
+                <img src="assets/img/projects/VAE.webp" class="img-fluid" alt="Variational AutoEncoder" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Variational AutoEncoder</h4>
                   <p>Generate Images from a Latent Space</p>
-                  <a href="assets/img/projects/VAE.jpg" data-glightbox="title: <h3>Variational AutoEncoder</h3>; description: .vae-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="assets/img/projects/VAE.webp" data-glightbox="title: <h3>Variational AutoEncoder</h3>; description: .vae-desc" data-gallery="portfolio-gallery-all" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                   <a href="https://github.com/crypto-code/Variational-Autoencoder" target="_blank" rel="noopener noreferrer" title="GitHub" class="details-link"><i class="bi bi-link-45deg"></i></a>
                   <div class="glightbox-desc vae-desc">
                     <p>
@@ -637,7 +630,7 @@
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-vision">
               <div class="portfolio-content h-100">
-                <img src="assets/img/projects/Hopfield.png" class="img-fluid" alt="">
+                <img src="assets/img/projects/Hopfield.png" class="img-fluid" alt="Image Reconstruction" loading="lazy" decoding="async">
                 <div class="portfolio-info">
                   <h4>Image Reconstruction</h4>
                   <p>Image Reconstruction using a Hopfield Network</p>

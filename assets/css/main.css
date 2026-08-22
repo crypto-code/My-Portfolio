@@ -401,7 +401,13 @@ a:hover {
   z-index: 999999;
   overflow: hidden;
   background: var(--background-color);
-  transition: all 0.6s ease-out;
+  transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+}
+
+#preloader.loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 #preloader:before {
@@ -832,10 +838,49 @@ section,
 .portfolio .portfolio-content {
   position: relative;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.portfolio .portfolio-content.img-loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: card-shimmer 1.5s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portfolio .portfolio-content.img-loading::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: card-spinner 0.8s linear infinite;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .portfolio .portfolio-content img {
-  transition: 0.3s;
+  width: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+}
+
+.portfolio .portfolio-content img.loaded {
+  opacity: 1;
+}
+
+.portfolio .portfolio-content.img-loaded {
+  background-color: transparent;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -945,10 +990,64 @@ section,
 .research .research-content {
   position: relative;
   overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.research .research-content.img-loading::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  background-size: 200% 100%;
+  animation: card-shimmer 1.5s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.research .research-content.img-loading::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
+  width: 28px;
+  height: 28px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--accent-color);
+  border-radius: 50%;
+  animation: card-spinner 0.8s linear infinite;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .research .research-content img {
-  transition: 0.3s;
+  width: 100%;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease;
+}
+
+.research .research-content img.loaded {
+  opacity: 1;
+}
+
+.research .research-content.img-loaded {
+  background-color: transparent;
+}
+
+@keyframes card-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes card-spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .research .research-content .research-info {
