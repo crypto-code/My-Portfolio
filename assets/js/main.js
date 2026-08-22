@@ -134,18 +134,22 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js
+   * Init typed.js with smooth pacing and trimmed strings
    */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
     let typed_strings = selectTyped.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
+    typed_strings = typed_strings.split(',').map(s => s.trim());
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+      typeSpeed: 55,
+      backSpeed: 30,
+      backDelay: 2200,
+      startDelay: 300,
+      smartBackspace: true,
+      showCursor: true,
+      cursorChar: '|'
     });
   }
 
