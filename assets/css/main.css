@@ -644,16 +644,225 @@ section,
   transform: translateY(-2px);
 }
 
-@media (max-width: 768px) {
+/*--------------------------------------------------------------
+# Multi-Viewport & Responsive Design System
+--------------------------------------------------------------*/
+
+/* 1. Ultra-Wide Screens & 2K/4K Displays (>= 1600px, >= 2200px) */
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1440px;
+  }
   .hero-title {
-    font-size: 36px;
+    font-size: 70px;
   }
   .hero-subtitle {
-    font-size: 18px;
-    min-height: 80px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 2200px) {
+  .container {
+    max-width: 1680px;
+  }
+  .hero-title {
+    font-size: 80px;
+  }
+  .hero-subtitle {
+    font-size: 28px;
+  }
+}
+
+/* 2. Standard Desktops & Laptops (1200px - 1599px) */
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .hero-title {
+    font-size: 56px;
+  }
+  .hero-subtitle {
+    font-size: 22px;
+  }
+}
+
+/* 3. Tablets in Landscape (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hero-title {
+    font-size: 48px;
+  }
+  .hero-subtitle {
+    font-size: 20px;
+    min-height: 60px;
+  }
+  .section {
+    padding: 70px 0;
+  }
+}
+
+/* 4. Tablets in Portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero {
+    min-height: 90vh;
+    padding: 100px 0 60px 0;
+  }
+  .hero-title {
+    font-size: 44px;
+  }
+  .hero-subtitle {
+    font-size: 19px;
+    min-height: 64px;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .bento-stat-card {
+    padding: 16px 12px;
+  }
+  .stat-number {
+    font-size: 26px;
+  }
+  .timeline-wrap {
+    padding-left: 20px;
+  }
+}
+
+/* 5. Mobile Devices (<= 767px) */
+@media (max-width: 767px) {
+  body {
+    font-size: 14.5px;
+  }
+  section,
+  .section {
+    padding: 55px 0;
+  }
+  .section-title {
+    padding-bottom: 35px;
+  }
+  .section-title h2 {
+    font-size: 26px;
+  }
+  .hero {
+    min-height: 100svh;
+    padding: 85px 0 50px 0;
+  }
+  .hero-status-pill {
+    font-size: 12px;
+    padding: 5px 12px;
+    margin-bottom: 18px;
+    line-height: 1.4;
+  }
+  .hero-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  .hero-subtitle {
+    font-size: 17px;
+    line-height: 1.45;
+    min-height: 76px;
+    margin-bottom: 24px;
   }
   .typed-cursor {
     font-size: 18px;
+  }
+  .hero-actions {
+    gap: 10px;
+  }
+  .btn-primary-glow,
+  .btn-glass {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+  .btn-glass-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+  }
+  .about-avatar-card img {
+    max-width: 240px;
+  }
+  .about-headline {
+    font-size: 22px;
+  }
+  .bento-stat-card {
+    padding: 14px 10px;
+  }
+  .stat-number {
+    font-size: 24px;
+  }
+  .stat-label {
+    font-size: 11px;
+  }
+  .timeline-wrap {
+    padding-left: 18px;
+  }
+  .timeline-marker {
+    left: -18px;
+    width: 12px;
+    height: 12px;
+    top: 16px;
+  }
+  .timeline-content-card {
+    padding: 16px 14px;
+  }
+  .role-title {
+    font-size: 15px;
+  }
+  .company-title {
+    font-size: 13px;
+  }
+  .timeline-list {
+    padding-left: 14px;
+    font-size: 13px;
+  }
+  .skill-category-card {
+    padding: 20px 16px;
+  }
+  .portfolio .portfolio-filters {
+    border-radius: 20px;
+    padding: 4px;
+    gap: 4px;
+  }
+  .portfolio .portfolio-filters li {
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+}
+
+/* 6. Extra-Small Mobile Devices (<= 380px, e.g. iPhone SE, Galaxy Fold) */
+@media (max-width: 380px) {
+  .hero-title {
+    font-size: 30px;
+  }
+  .hero-subtitle {
+    font-size: 15.5px;
+    min-height: 86px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .btn-primary-glow,
+  .btn-glass {
+    width: 100%;
+    justify-content: center;
+  }
+  .btn-glass-icon {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .bento-stat-card {
+    padding: 12px 6px;
+  }
+  .stat-number {
+    font-size: 22px;
+  }
+  .stat-icon-wrap {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  .timeline-badge {
+    font-size: 11px;
+    padding: 3px 8px;
   }
 }
 

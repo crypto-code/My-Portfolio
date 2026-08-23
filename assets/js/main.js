@@ -134,7 +134,7 @@
   window.addEventListener('load', aosInit);
 
   /**
-   * Init typed.js with smooth pacing and trimmed strings
+   * Init typed.js with smooth continuous pacing and raw text typing (zero entity delays)
    */
   const selectTyped = document.querySelector('.typed');
   if (selectTyped) {
@@ -143,11 +143,12 @@
     new Typed('.typed', {
       strings: typed_strings,
       loop: true,
-      typeSpeed: 55,
-      backSpeed: 30,
+      typeSpeed: 45,
+      backSpeed: 25,
       backDelay: 2200,
       startDelay: 300,
-      smartBackspace: true,
+      smartBackspace: false,
+      contentType: 'null',
       showCursor: true,
       cursorChar: '|'
     });
