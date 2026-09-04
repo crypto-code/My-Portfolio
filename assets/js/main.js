@@ -281,82 +281,80 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
-  // Auto update functions
-  async function getScholarStats(authorId) {
+  /**
+   * Dynamic Stats Loader (Google Scholar Primary + Semantic Scholar & GitHub Fallback)
+   */
+  async function loadDynamicStats() {
+    let stats = {
+      citations: 339,
+      papers: 5,
+      githubRepos: 39,
+      githubStars: 530
+    };
+
+    let loadedFromJson = false;
+
+    // 1. Primary: Fetch synced Google Scholar & GitHub stats from assets/data/stats.json
     try {
-      const response = await fetch(`https://api.semanticscholar.org/graph/v1/author/${authorId}?fields=paperCount,citationCount`);
-      if (!response.ok) throw new Error(`Semantic Scholar API Error: ${response.statusText}`);
-      const data = await response.json();
-      return {
-        citationCount: data.citationCount ?? 0,
-        paperCount: 5
-      };
-    } catch (error) {
-      console.warn("Could not fetch Scholar stats, using fallback:", error);
-      return {
-        citationCount: 72,
-        paperCount: 5
-      };
-    }
-  }
-
-  // Fetch Scholar Stats (Author ID: 2232951291 - Atin Sakkeer Hussain)
-  getScholarStats("2232951291").then((data) => {
-    if (!data) return;
-    const papersElement = document.getElementById("scholar-papers-auto");
-    const citationsElement = document.getElementById("scholar-citations-auto");
-    if (papersElement) papersElement.setAttribute("data-purecounter-end", `${data.paperCount}`);
-    if (citationsElement) citationsElement.setAttribute("data-purecounter-end", `${data.citationCount}`);
-    if (typeof PureCounter !== "undefined") {
-      new PureCounter();
-    }
-  }).catch((err) => {
-    console.warn("Could not retrieve Scholar stats:", err);
-  });
-
-  async function getGitHubStats(username) {
-    let url = `https://api.github.com/users/${username}/repos`;
-    let totalStars = 0;
-    let totalRepos = 0;
-    let page = 1;
-
-    try {
-      while (url) {
-        const response = await fetch(`${url}?per_page=100&page=${page}`);
-        if (!response.ok) throw new Error(`GitHub API Error: ${response.statusText}`);
-
-        const repos = await response.json();
-        totalRepos += repos.length;
-        totalStars += repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
-
-        // Pagination: Check if there's another page
-        const linkHeader = response.headers.get("link");
-        if (linkHeader && linkHeader.includes('rel="next"')) {
-          page++;
-        } else {
-          break; // No more pages
-        }
+      const resp = await fetch('assets/data/stats.json', { cache: 'no-cache' });
+      if (resp.ok) {
+        const json = await resp.json();
+        if (json.citations) stats.citations = json.citations;
+        if (json.papers) stats.papers = json.papers;
+        if (json.githubRepos) stats.githubRepos = json.githubRepos;
+        if (json.githubStars) stats.githubStars = json.githubStars;
+        loadedFromJson = true;
       }
-      return { totalRepos, totalStars };
-    } catch (error) {
-      console.error("Error:", error);
+    } catch (e) {
+      console.info("Notice: Using live API fallback for stats:", e.message);
     }
-  }
 
-  // Example usage:
-  getGitHubStats("crypto-code").then((data) => {
-    if (!data) return;
-    const { totalRepos, totalStars } = data;
-    const repoElement = document.getElementById("github-repos-auto");
-    const starElement = document.getElementById("github-stars-auto");
-    if (repoElement) repoElement.setAttribute("data-purecounter-end", `${totalRepos}`);
-    if (starElement) starElement.setAttribute("data-purecounter-end", `${totalStars}`);
+    // 2. If stats.json is not available, fetch live APIs
+    if (!loadedFromJson) {
+      // Fallback: Semantic Scholar API for citations
+      try {
+        const scholarResp = await fetch('https://api.semanticscholar.org/graph/v1/author/2232951291?fields=citationCount');
+        if (scholarResp.ok) {
+          const scholarData = await scholarResp.json();
+          if (scholarData.citationCount) stats.citations = scholarData.citationCount;
+        }
+      } catch (err) {
+        console.warn("Semantic Scholar fallback error:", err);
+      }
+
+      // Fallback: GitHub API for public repos and stars
+      try {
+        let url = 'https://api.github.com/users/crypto-code/repos?per_page=100';
+        const ghResp = await fetch(url);
+        if (ghResp.ok) {
+          const repos = await ghResp.json();
+          if (Array.isArray(repos)) {
+            stats.githubRepos = repos.length;
+            stats.githubStars = repos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0);
+          }
+        }
+      } catch (err) {
+        console.warn("GitHub API fallback error:", err);
+      }
+    }
+
+    // Update DOM elements
+    const papersEl = document.getElementById("scholar-papers-auto");
+    const citationsEl = document.getElementById("scholar-citations-auto");
+    const reposEl = document.getElementById("github-repos-auto");
+    const starsEl = document.getElementById("github-stars-auto");
+
+    if (papersEl) papersEl.setAttribute("data-purecounter-end", `${stats.papers}`);
+    if (citationsEl) citationsEl.setAttribute("data-purecounter-end", `${stats.citations}`);
+    if (reposEl) reposEl.setAttribute("data-purecounter-end", `${stats.githubRepos}`);
+    if (starsEl) starsEl.setAttribute("data-purecounter-end", `${stats.githubStars}`);
+
     if (typeof PureCounter !== "undefined") {
       new PureCounter();
     }
-  }).catch((err) => {
-    console.warn("Could not retrieve GitHub stats:", err);
-  });
+  }
+
+  loadDynamicStats();
 
 
 
