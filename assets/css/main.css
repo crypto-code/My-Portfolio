@@ -1042,6 +1042,10 @@ section,
   color: var(--accent-secondary) !important;
 }
 
+.text-muted {
+  color: #94a3b8 !important;
+}
+
 .timeline-group-header {
   display: flex;
   align-items: center;
@@ -1105,6 +1109,12 @@ section,
   border-color: rgba(0, 210, 255, 0.35);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 210, 255, 0.1);
   transform: translateY(-2px);
+}
+
+.timeline-content-card p {
+  color: #cbd5e1 !important;
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .role-title {
