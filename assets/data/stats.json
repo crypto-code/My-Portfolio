@@ -1,12 +1,12 @@
 {
-  "citations": 230,
-  "citationsGoogle": 356,
+  "citations": 362,
+  "citationsGoogle": 362,
   "citationsSemantic": 230,
   "hIndex": 5,
   "i10Index": 4,
   "papers": 5,
   "githubRepos": 39,
   "githubStars": 529,
-  "primarySource": "Semantic Scholar (Fallback)",
-  "lastUpdated": "2026-10-30T04:37:43.211757+00:00"
+  "primarySource": "Google Scholar",
+  "lastUpdated": "2026-10-31T04:21:27.735987+00:00"
 }
