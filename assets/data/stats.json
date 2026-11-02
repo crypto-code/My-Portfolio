@@ -1,5 +1,5 @@
 {
-  "citations": 363,
+  "citations": 230,
   "citationsGoogle": 363,
   "citationsSemantic": 230,
   "hIndex": 5,
@@ -7,6 +7,6 @@
   "papers": 5,
   "githubRepos": 39,
   "githubStars": 529,
-  "primarySource": "Google Scholar",
-  "lastUpdated": "2026-11-01T04:40:24.927766+00:00"
+  "primarySource": "Semantic Scholar (Fallback)",
+  "lastUpdated": "2026-11-02T04:42:18.882646+00:00"
 }
